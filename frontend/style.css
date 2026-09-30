@@ -1,0 +1,1180 @@
+/* ===========================================
+   AI CA Assistant
+   Modern FinTech UI
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #16a34a;
+  --primary-dark: #15803d;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #111827;
+  --text-light: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 20px 60px rgba(0, 0, 0, .08);
+  --radius: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  min-height: 100vh;
+
+}
+
+.hidden {
+
+  display: none !important;
+
+}
+
+/* ===========================
+        MAIN CONTAINER
+=========================== */
+
+.container {
+
+  display: flex;
+
+  min-height: 100vh;
+
+}
+
+/* ===========================
+        LEFT PANEL
+=========================== */
+
+.left-panel {
+
+  width: 50%;
+
+  background: linear-gradient(160deg,
+      #16a34a,
+      #22c55e);
+
+  color: white;
+
+  padding: 70px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.left-panel::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+
+  height: 500px;
+
+  background: rgba(255, 255, 255, .08);
+
+  border-radius: 50%;
+
+  top: -120px;
+
+  right: -120px;
+
+}
+
+.left-panel::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+
+  height: 320px;
+
+  background: rgba(255, 255, 255, .06);
+
+  border-radius: 50%;
+
+  bottom: -120px;
+
+  left: -100px;
+
+}
+
+/* ===========================
+          BRAND
+=========================== */
+
+.brand {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+.logo {
+
+  width: 70px;
+
+  height: 70px;
+
+  border-radius: 20px;
+
+  background: white;
+
+  color: #16a34a;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 32px;
+
+  margin-bottom: 20px;
+
+  box-shadow: var(--shadow);
+
+}
+
+.brand h1 {
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  margin-bottom: 15px;
+
+}
+
+.brand p {
+
+  font-size: 18px;
+
+  opacity: .9;
+
+  line-height: 1.6;
+
+  max-width: 420px;
+
+}
+
+/* ===========================
+       HERO CONTENT
+=========================== */
+
+.hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+.hero-content h2 {
+
+  font-size: 48px;
+
+  line-height: 1.2;
+
+  margin-bottom: 30px;
+
+  font-weight: 800;
+
+}
+
+.hero-content p {
+
+  font-size: 18px;
+
+  line-height: 2;
+
+  opacity: .95;
+
+  max-width: 500px;
+
+}
+
+.learn-btn {
+
+  margin-top: 40px;
+
+  padding: 16px 34px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: white;
+
+  color: #16a34a;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .3s;
+
+  box-shadow: var(--shadow);
+
+}
+
+.learn-btn:hover {
+
+  transform: translateY(-4px);
+
+}
+
+/* ===========================
+        RIGHT PANEL
+=========================== */
+
+.right-panel {
+
+  width: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 50px;
+
+  background: #f8fafc;
+
+}
+
+/* ===========================
+        AUTH CARD
+=========================== */
+
+.auth-card {
+
+  width: 100%;
+
+  max-width: 480px;
+
+  background: white;
+
+  padding: 50px;
+
+  border-radius: 30px;
+
+  box-shadow: var(--shadow);
+
+  animation: fadeUp .5s ease;
+
+}
+
+.auth-card h2 {
+
+  font-size: 34px;
+
+  margin-bottom: 10px;
+
+}
+
+.auth-card p {
+
+  color: var(--text-light);
+
+  margin-bottom: 30px;
+
+}
+
+/* ===========================
+       INPUT GROUP
+=========================== */
+
+.input-group {
+
+  margin-bottom: 20px;
+
+}
+
+.input-group label {
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-weight: 600;
+
+  font-size: 15px;
+
+}
+
+.input-group input {
+
+  width: 100%;
+
+  padding: 16px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: .3s;
+
+  background: white;
+
+}
+
+.input-group input:focus {
+
+  border-color: #16a34a;
+
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, .12);
+
+}
+
+/* ===========================
+      REMEMBER ROW
+=========================== */
+
+.remember-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  font-size: 14px;
+
+}
+
+.remember-row a {
+
+  color: #16a34a;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+}
+
+.remember-row label {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+/* ===========================
+      PRIMARY BUTTON
+=========================== */
+
+.primary-btn {
+
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #16a34a;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .3s;
+
+  box-shadow: 0 12px 30px rgba(22, 163, 74, .20);
+
+}
+
+.primary-btn:hover {
+
+  background: #15803d;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 20px 35px rgba(22, 163, 74, .35);
+
+}
+
+/* ===========================
+       GOOGLE BUTTON
+=========================== */
+
+.google-btn {
+
+  width: 100%;
+
+  padding: 15px;
+
+  margin-top: 25px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  background: white;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  transition: .3s;
+
+}
+
+.google-btn:hover {
+
+  background: #f9fafb;
+
+  border-color: #16a34a;
+
+}
+
+/* ===========================
+         DIVIDER
+=========================== */
+
+.divider {
+
+  display: flex;
+
+  align-items: center;
+
+  margin: 30px 0;
+
+}
+
+.divider::before,
+.divider::after {
+
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: #e5e7eb;
+
+}
+
+.divider span {
+
+  padding: 0 18px;
+
+  color: #9ca3af;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+/* ===========================
+        BOTTOM TEXT
+=========================== */
+
+.bottom-text {
+
+  text-align: center;
+
+  margin-top: 30px;
+
+  color: #6b7280;
+
+}
+
+.bottom-text a {
+
+  color: #16a34a;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+}
+
+.bottom-text a:hover {
+
+  text-decoration: underline;
+
+}
+
+/* ===========================
+          MODAL
+=========================== */
+
+.modal {
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(15, 23, 42, .45);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  backdrop-filter: blur(6px);
+
+  z-index: 999;
+
+}
+
+.modal-box {
+
+  width: 420px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 40px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .20);
+
+  animation: popup .35s ease;
+
+}
+
+.modal-box h2 {
+
+  margin-bottom: 12px;
+
+}
+
+.modal-box p {
+
+  color: #6b7280;
+
+  margin-bottom: 25px;
+
+}
+
+.modal-box input {
+
+  width: 100%;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  margin-bottom: 20px;
+
+  font-size: 15px;
+
+}
+
+.cancel-btn {
+
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #ef4444;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: .3s;
+
+}
+
+.cancel-btn:hover {
+
+  background: #dc2626;
+
+}
+
+/* ===========================
+      SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: #16a34a;
+
+  border-radius: 20px;
+
+}
+
+/* ===========================
+        ANIMATIONS
+=========================== */
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+@keyframes popup {
+
+  from {
+
+    opacity: 0;
+
+    transform: scale(.9);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media(max-width:1100px) {
+
+  .left-panel {
+
+    display: none;
+
+  }
+
+  .right-panel {
+
+    width: 100%;
+
+    padding: 30px;
+
+  }
+
+  .auth-card {
+
+    max-width: 520px;
+
+  }
+
+}
+
+@media(max-width:650px) {
+
+  .auth-card {
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+  }
+
+  .auth-card h2 {
+
+    font-size: 28px;
+
+  }
+
+  .primary-btn {
+
+    padding: 15px;
+
+  }
+
+}
+
+/* ===========================================
+   PART 3 - PREMIUM UI ENHANCEMENTS
+=========================================== */
+
+/* Smooth scrolling */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Beautiful Selection */
+
+::selection{
+    background:#16a34a;
+    color:white;
+}
+
+/* Floating Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:700px;
+height:700px;
+
+background:radial-gradient(circle,
+rgba(22,163,74,.08),
+transparent 70%);
+
+top:-250px;
+right:-250px;
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:650px;
+height:650px;
+
+background:radial-gradient(circle,
+rgba(34,197,94,.06),
+transparent 70%);
+
+bottom:-250px;
+left:-250px;
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+
+/* Auth Card Hover */
+
+.auth-card{
+
+transition:.35s ease;
+
+}
+
+.auth-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+0 35px 80px rgba(0,0,0,.12);
+
+}
+
+/* Better Inputs */
+
+.input-group input:hover{
+
+border-color:#cbd5e1;
+
+}
+
+.input-group input::placeholder{
+
+color:#94a3b8;
+
+}
+
+/* Better Logo */
+
+.logo{
+
+transition:.4s;
+
+}
+
+.logo:hover{
+
+transform:rotate(8deg) scale(1.08);
+
+}
+
+/* Left Hero */
+
+.hero-content{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-end;
+
+height:100%;
+
+}
+
+/* Hero Title */
+
+.hero-content h2{
+
+max-width:500px;
+
+}
+
+/* Hero Paragraph */
+
+.hero-content p{
+
+margin-top:10px;
+
+}
+
+/* Better Brand */
+
+.brand{
+
+margin-bottom:60px;
+
+}
+
+/* Better Learn Button */
+
+.learn-btn{
+
+letter-spacing:.3px;
+
+}
+
+.learn-btn:hover{
+
+background:#f0fdf4;
+
+}
+
+/* Nice Links */
+
+a{
+
+transition:.25s;
+
+}
+
+a:hover{
+
+opacity:.85;
+
+}
+
+/* Better Checkbox */
+
+input[type="checkbox"]{
+
+accent-color:#16a34a;
+
+cursor:pointer;
+
+}
+
+/* Better Modal */
+
+.modal-box{
+
+max-width:450px;
+
+}
+
+/* Input Animation */
+
+.input-group input{
+
+transition:
+border .3s,
+box-shadow .3s,
+transform .25s;
+
+}
+
+.input-group input:focus{
+
+transform:translateY(-2px);
+
+}
+
+/* Nice Card Animation */
+
+@keyframes floatCard{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-5px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.auth-card{
+
+animation:
+fadeUp .6s,
+floatCard 6s ease-in-out infinite;
+
+}
+
+/* Button Active */
+
+.primary-btn:active,
+.google-btn:active,
+.learn-btn:active{
+
+transform:scale(.98);
+
+}
+
+/* Better Shadows */
+
+.primary-btn{
+
+box-shadow:
+
+0 15px 30px rgba(22,163,74,.25);
+
+}
+
+.learn-btn{
+
+box-shadow:
+
+0 18px 40px rgba(0,0,0,.15);
+
+}
+
+/* Better Typography */
+
+h1,h2,h3{
+
+letter-spacing:-.5px;
+
+}
+
+p{
+
+line-height:1.7;
+
+}
+
+/* Fancy Divider */
+
+.divider{
+
+position:relative;
+
+}
+
+.divider span{
+
+background:white;
+
+}
+
+/* Nice Fade */
+
+.hidden{
+
+display:none !important;
+
+opacity:0;
+
+}
+
+/* Glass Effect */
+
+.auth-card{
+
+backdrop-filter:blur(15px);
+
+}
+
+/* Mouse Hover */
+
+.primary-btn,
+.google-btn,
+.learn-btn,
+.cancel-btn{
+
+transition:
+
+transform .3s,
+
+box-shadow .3s,
+
+background .3s;
+
+}
+
+/* Small Bounce */
+
+.primary-btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+.google-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.cancel-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* Better Mobile */
+
+@media(max-width:900px){
+
+.left-panel{
+
+display:none;
+
+}
+
+.right-panel{
+
+width:100%;
+
+padding:30px;
+
+}
+
+.container{
+
+display:block;
+
+}
+
+.auth-card{
+
+margin:auto;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.auth-card{
+
+padding:30px 24px;
+
+}
+
+.brand h1{
+
+font-size:34px;
+
+}
+
+.hero-content h2{
+
+font-size:34px;
+
+}
+
+.input-group input{
+
+padding:14px;
+
+}
+
+.primary-btn{
+
+padding:15px;
+
+}
+
+}

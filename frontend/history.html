@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chat History - AI CA Assistant</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="stylesheet" href="history.css">
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="logo">
+
+        <div class="logo-icon">
+          🤖
+        </div>
+
+        <div>
+          <h2>AI CA</h2>
+          <span>Assistant</span>
+        </div>
+
+      </div>
+
+      <nav>
+
+        <a href="dashboard.html">
+          <i class="fa-solid fa-table-columns"></i>
+          Dashboard
+        </a>
+
+        <a href="dashboard.html">
+          <i class="fa-solid fa-comments"></i>
+          AI Chat
+        </a>
+
+        <a href="dashboard.html">
+          <i class="fa-solid fa-file-arrow-up"></i>
+          Upload Documents
+        </a>
+
+        <a href="dashboard.html">
+          <i class="fa-solid fa-chart-column"></i>
+          Reports
+        </a>
+
+        <a href="history.html" class="active">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          History
+        </a>
+
+        <a href="dashboard.html">
+          <i class="fa-solid fa-gear"></i>
+          Settings
+        </a>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+      <header class="topbar">
+
+        <div>
+          <h1>Chat History</h1>
+          <p>View your previous AI conversations</p>
+        </div>
+
+      </header>
+
+
+      <!-- HISTORY CARD -->
+
+      <section class="history-section">
+
+        <div class="history-header">
+
+          <h2>
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            Previous Chats
+          </h2>
+
+          <button id="clearHistoryBtn">
+            <i class="fa-solid fa-trash"></i>
+            Clear History
+          </button>
+
+        </div>
+
+
+        <div id="historyContainer">
+
+          <!-- Chat history will appear here -->
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <script src="history.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI CA Assistant Dashboard</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+      <div class="logo">
+
+        <div class="logo-icon">
+          🤖
+        </div>
+
+        <div>
+
+          <h2>AI CA</h2>
+
+          <span>Assistant</span>
+
+        </div>
+
+      </div>
+
+      <nav>
+
+        <a href="#" class="active">
+
+          <i class="fa-solid fa-table-columns"></i>
+
+          Dashboard
+
+        </a>
+
+        <a href="#">
+
+          <i class="fa-solid fa-comments"></i>
+
+          AI Chat
+
+        </a>
+
+        <a href="#">
+
+          <i class="fa-solid fa-file-arrow-up"></i>
+
+          Upload Documents
+
+        </a>
+
+        <a href="#">
+
+          <i class="fa-solid fa-chart-column"></i>
+
+          Reports
+
+        </a>
+
+        <a href="history.html">
+
+  <i class="fa-solid fa-clock-rotate-left"></i>
+
+  History
+
+</a>
+
+        <a href="#">
+
+          <i class="fa-solid fa-gear"></i>
+
+          Settings
+
+        </a>
+
+      </nav>
+
+      <button class="logout-btn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+      </button>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+      <!-- Top Bar -->
+
+      <header class="topbar">
+
+        <div>
+
+          <h1>
+
+            Dashboard 👋
+
+          </h1>
+
+          <p id="welcomeMessage">
+            Welcome back, Sujal
+          </p>
+
+        </div>
+
+        <div class="top-actions">
+
+          <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" placeholder="Search">
+
+          </div>
+
+          <button class="icon-btn">
+
+            <i class="fa-regular fa-bell"></i>
+
+          </button>
+
+          <div class="profile">
+
+            <img id="profileAvatar" src="https://ui-avatars.com/api/?name=Sujal&background=16a34a&color=fff"
+              alt="Profile">
+            <div>
+              <strong id="profileName">Sujal</strong>
+              <span id="profileEmail">Student</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </header>
+
+
+
+      <!-- ================= STATS ================= -->
+
+      <section class="stats-grid">
+
+        <div class="stat-card">
+
+          <div class="stat-icon green">
+
+            <i class="fa-solid fa-comments"></i>
+
+          </div>
+
+          <div>
+
+            <h2>128</h2>
+
+            <p>AI Chats</p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon blue">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+          </div>
+
+          <div>
+
+            <h2>24</h2>
+
+            <p>Documents</p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon orange">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+          </div>
+
+          <div>
+
+            <h2>12</h2>
+
+            <p>Reports</p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon purple">
+
+            <i class="fa-solid fa-bolt"></i>
+
+          </div>
+
+          <div>
+
+            <h2>584</h2>
+
+            <p>AI Queries</p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- PART 2 STARTS HERE -->
+
+      <!-- ================= CONTENT ================= -->
+
+      <section class="content-grid">
+
+        <!-- AI CHAT -->
+
+        <div class="card chat-card">
+
+          <div class="card-header">
+
+            <h2>
+              🤖 AI Assistant
+            </h2>
+
+            <button class="new-chat-btn">
+              New Chat
+            </button>
+
+          </div>
+
+          <div class="chat-messages">
+
+            <div class="message ai">
+
+              <div class="avatar">
+                🤖
+              </div>
+
+              <div class="bubble">
+
+                Hello <span id="chatUserName">Sujal</span>! 👋
+
+                <br><br>
+
+                I'm your AI CA Assistant.
+
+                <br><br>
+
+                How can I help you today?
+
+              </div>
+
+            </div>
+
+            <div class="message user">
+
+              <div class="bubble">
+
+                Help me understand GST registration requirements.
+
+              </div>
+
+            </div>
+
+            <div class="message ai">
+
+              <div class="avatar">
+                🤖
+              </div>
+
+              <div class="bubble">
+
+                Sure! I can explain GST registration,
+                eligibility, required documents,
+                filing process and penalties.
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="chat-input">
+
+            <input type="text" placeholder="Ask anything about taxation, audit, GST...">
+
+            <button>
+
+              <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- RIGHT PANEL -->
+
+        <div class="right-panel">
+
+          <!-- Upload -->
+
+          <div class="card upload-card">
+
+            <div class="card-header">
+
+              <h2>
+
+                📂 Upload Documents
+
+              </h2>
+
+            </div>
+
+            <div class="upload-area">
+
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+
+              <h3>
+
+                Drag & Drop Files
+
+              </h3>
+
+              <p>
+
+                PDF, Excel, Word, Images
+
+              </p>
+
+              <button type="button">Browse Files</button>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Generate Report -->
+
+          <div class="card report-card">
+
+            <div class="card-header">
+
+              <h2>
+
+                📄 AI Report Generator
+
+              </h2>
+
+            </div>
+
+            <p>
+
+              Generate audit reports, tax summaries,
+              compliance reports and financial insights
+              using AI.
+
+            </p>
+
+            <button class="generate-btn">
+
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+              Generate Report
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ================= RECENT ACTIVITY ================= -->
+
+      <section class="activity-section">
+
+        <div class="card">
+
+          <div class="card-header">
+
+            <h2>
+
+              Recent Activity
+
+            </h2>
+
+          </div>
+
+          <table class="activity-table">
+
+            <thead>
+
+              <tr>
+
+                <th>Activity</th>
+
+                <th>Date</th>
+
+                <th>Status</th>
+
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr>
+
+                <td>GST Report Generated</td>
+
+                <td>20 Jul 2026</td>
+
+                <td>
+
+                  <span class="status completed">
+
+                    Completed
+
+                  </span>
+
+                </td>
+
+              </tr>
+
+              <tr>
+
+                <td>ITR Documents Uploaded</td>
+
+                <td>19 Jul 2026</td>
+
+                <td>
+
+                  <span class="status processing">
+
+                    Processing
+
+                  </span>
+
+                </td>
+
+              </tr>
+
+              <tr>
+
+                <td>Audit Summary Created</td>
+
+                <td>18 Jul 2026</td>
+
+                <td>
+
+                  <span class="status completed">
+
+                    Completed
+
+                  </span>
+
+                </td>
+
+              </tr>
+
+              <tr>
+
+                <td>AI Tax Consultation</td>
+
+                <td>18 Jul 2026</td>
+
+                <td>
+
+                  <span class="status active">
+
+                    Active
+
+                  </span>
+
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+
+</body>
+
+</html>

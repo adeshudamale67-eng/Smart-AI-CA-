@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI CA Assistant</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-panel">
+
+            <div class="brand">
+
+                <div class="logo">
+                    🤖
+                </div>
+
+                <h1>AI CA Assistant</h1>
+
+                <p>
+                    Intelligent Financial Analysis Platform powered by AI.
+                </p>
+
+            </div>
+
+            <div class="hero-content">
+
+                <h2>
+                    Smarter Accounting Starts Here.
+                </h2>
+
+                <p>
+
+                    Analyze GST Reports
+
+                    <br><br>
+
+                    Generate Financial Statements
+
+                    <br><br>
+
+                    AI Powered Tax Assistance
+
+                    <br><br>
+
+                    Upload Balance Sheets
+
+                    <br><br>
+
+                    Instant Insights & Reports
+
+                </p>
+
+                <button class="learn-btn">
+
+                    Learn More
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right-panel">
+
+            <!-- LOGIN -->
+
+            <div class="auth-card" id="loginCard">
+
+                <h2>
+
+                    Welcome Back 👋
+
+                </h2>
+
+                <p>
+
+                    Login to continue
+
+                </p>
+
+                <form>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Username
+
+                        </label>
+
+                        <input id="username" type="text" placeholder="Enter Username">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Password
+
+                        </label>
+
+                        <input id="password" type="password" placeholder="Enter Password">
+
+                    </div>
+
+                    <div class="remember-row">
+
+                        <label>
+
+                            <input type="checkbox">
+
+                            Remember Me
+
+                        </label>
+
+                        <a href="#" onclick="openForgotPassword()">
+
+                            Forgot Password?
+
+                        </a>
+
+                    </div>
+
+                    <button type="button" class="primary-btn" onclick="login()">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <div class="divider">
+
+                    <span>OR</span>
+
+                </div>
+
+                <button class="google-btn">
+
+                    <i class="fa-brands fa-google"></i>
+
+                    Continue with Google
+
+                </button>
+
+                <p class="bottom-text">
+
+                    Don't have an account?
+
+                    <a href="#" onclick="showSignup()">
+
+                        Create Account
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <!-- SIGNUP -->
+
+            <div class="auth-card hidden" id="signupCard">
+
+                <h2>
+
+                    Create Account
+
+                </h2>
+
+                <p>
+
+                    Join AI CA Assistant
+
+                </p>
+
+                <form>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Full Name
+
+                        </label>
+
+                        <input id="fullName" type="text">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Email
+
+                        </label>
+
+                        <input id="email" type="email">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Username
+
+                        </label>
+
+                        <input id="newUsername" type="text">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Password
+
+                        </label>
+
+                        <input id="newPassword" type="password">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Confirm Password
+
+                        </label>
+
+                        <input id="confirmPassword" type="password">
+
+                    </div>
+
+                    <button type="button" class="primary-btn" onclick="signup()">
+
+                        Create Account
+
+                    </button>
+
+                </form>
+
+                <p class="bottom-text">
+
+                    Already have an account?
+
+                    <a href="#" onclick="showLogin()">
+
+                        Login
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Forgot Password Modal -->
+
+    <div class="modal hidden" id="forgotModal">
+
+        <div class="modal-box">
+
+            <h2>
+
+                Reset Password
+
+            </h2>
+
+            <p>
+
+                Enter your registered email.
+
+            </p>
+
+            <input id="resetEmail" type="email" placeholder="Email Address">
+
+            <button class="primary-btn" onclick="resetPassword()">
+
+                Send Reset Link
+
+            </button>
+
+            <button class="cancel-btn" onclick="closeForgotPassword()">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
